@@ -1,4 +1,4 @@
-# Course Work Repository
+# Course Work Branch
 
 Demonstrates early work done in Computer Science courses
 Each work is done in a different Language:
