@@ -1,4 +1,4 @@
-# WHose-on-FIRST
-My first Github repository
+# Relevant Projects
 
-Every effort begins with at least one cup of coffee..
+This is to showcase the work I have done both on my own and as a college student.
+One branch will be dedicated to University Coursework and the other to projects made outside of class.
