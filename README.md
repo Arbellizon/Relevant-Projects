@@ -1,4 +1,6 @@
-# WHose-on-FIRST
-My first Github repository
+# Course Work Repository
 
-Every effort begins with at least one cup of coffee..
+Demonstrates early work done in Computer Science courses
+Each work is done in a different Language:
+C++, C#, Java, Javascript, Html, JQuery, PhP, MySQLI
+
