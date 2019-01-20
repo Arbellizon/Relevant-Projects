@@ -1,0 +1,5 @@
+use csc320_calvija
+
+Insert Into Customers (Firstname, Lastname, Email, MailingAddress, BillingAddress, Phone, Password, Username)
+	Values ('John', 'Casino', 'flavorless@e.com', '344S.Boiligbrook 
+	Ave.AugustusIl', 'p.o.box1234', '8156273421', 'a', 'b');

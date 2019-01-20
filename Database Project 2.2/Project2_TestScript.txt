@@ -1,0 +1,12 @@
+use csc320_calvija
+
+Insert Into Customers (Firstname, Lastname, Email, MailingAddress, BillingAddress, Phone, Password, Username)
+	Values ('', '', '', '', '', '', '', '');
+
+Insert Into Flights (Destintation , DepartureDate , ReturnDate) 
+	Values ('','', '');
+
+Insert Into FlightReservations ( CustomerID , FlightID)
+	Values ( ,);
+
+

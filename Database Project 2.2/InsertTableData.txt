@@ -1,0 +1,154 @@
+use csc320_calvija
+
+Insert Into Customers (Firstname, Lastname, Email, MailingAddress, BillingAddress, Phone)
+	Values ('John', 'Casino', 'flavorless@e.com', '344S.Boiligbrook 
+	Ave.AugustusIl', 'p.o.box1234', '8156273421');
+
+Insert Into Customers (Firstname, Lastname, Email,MailingAddress, BillingAddress, Phone)
+	Values ('Kasey', 'Morrows', 'hotpinks@gravel.com', '5342
+	NjuniperDr.Miami', 'p.o.box5242', '3459872534');
+
+Insert Into Customers (Firstname, Lastname, Email, MailingAddress, BillingAddress, Phone)
+	Values ('Abe', 'Chesterfield', 'getem@rightnow.com', 	
+	'7368W.YorkCt.ChicagoIL', 'p.o.box0367', '72659872431');
+
+Insert Into Customers (Firstname, Lastname, Email, MailingAddress, BillingAddress, Phone)
+	Values ('Caroline', 'Karlisle', 'wheago@firm.com', 
+	'8632RumbletomnwaNewYorkNy', 'p.o.box9397', '6347674647');
+
+Insert Into Customers (Firstname, Lastname, Email, MailingAddress, BillingAddress, Phone)
+	Values ('Jeremy', 'Ashline', 'awesomer@dude.com', 
+	'6347 SureyLn.SansND','p.o.box5237', '3378938765');
+
+
+
+Insert Into Cars  (RentalStartDate, RentalEndDate)
+	Values ('10102017', '10202017');
+
+Insert Into Cars (RentalStartDate, RentalEndDate)
+	Values ('12092017', '12152017');
+
+Insert Into Cars ( RentalStartDate, RentalEndDate)
+	Values ('09152017', '09282017');
+
+Insert Into Cars ( RentalStartDate, RentalEndDate)
+	Values ('01082017', '10222017');
+
+Insert Into Cars ( RentalStartDate, RentalEndDate)
+	Values ('11272017','12122017');
+
+
+
+Insert Into CarReservations ( CarID, CustomerID)
+	Values ('67887', '27125');
+
+Insert Into CarReservations (CarID, CustomerID)
+	Values ( '78906', '24');
+
+Insert Into CarReservations (CarID, CustomerID)
+	Values (' 89067', '34521');
+
+Insert Into CarReservations ( CarID, CustomerID)
+	Values (' 90678', '45321');
+
+
+Insert Into CarReservations (CarID, CustomerID)
+	Values ('06789', '54321');
+
+
+
+Insert Into Flights (Destintation , DepartureDate , ReturnDate) 
+	Values ('Moscow','10102017', '11112017');
+
+Insert Into Flights ( Destintation , DepartureDate , ReturnDate) 
+	Values ( 'Montgomery',' 10122017', '11152017');
+
+Insert Into Flights ( Destintation , DepartureDate , ReturnDate) 
+	Values (' Austraila', '10152017', '11292017');
+
+Insert Into Flights ( Destintation , DepartureDate , ReturnDate) 
+	Values ('Jamaca', '10232017','11102017');
+
+Insert Into Flights (Destintation , DepartureDate , ReturnDate) 
+	Values ('Canada', '07102017', '12012017');
+
+
+
+Insert Into FlightReservations ( CustomerID , FlightID)
+	Values ( '13' , '5678');
+
+Insert Into FlightReservations (CustomerID , FlightID)
+	Values ('23451', '6785');
+
+Insert Into FlightReservations (CustomerID , FlightID)
+	Values ( '34521', '7856');
+
+Insert Into FlightReservations ( CustomerID , FlightID)
+	Values ('45321',' 8567');
+
+Insert Into FlightReservations ( CustomerID , FlightID)
+	Values ('54321', '5786');
+
+
+
+Insert Into Hotel ( ArrivalDate, DepartureDate)
+	Values ('10102017', '01122017');
+ 
+Insert Into Hotel ( ArrivalDate, DepartureDate)
+	Values ('10122017', '11022017');
+
+Insert Into Hotel ( ArrivalDate, DepartureDate)
+	Values ('10152017', '07122017');
+
+Insert Into Hotel ( ArrivalDate, DepartureDate)
+	Values ('10232017', '01232017');
+
+Insert Into Hotel ( ArrivalDate, DepartureDate)
+	Values ('07102017', '04222017');
+
+
+
+Insert Into HotelReservations (CustomerID ,  HotelID)
+	Values ('12345',' 001');
+
+Insert Into HotelReservations ( CustomerID ,  HotelID)
+	Values ('234516', '020');
+
+Insert Into HotelReservations ( CustomerID ,  HotelID )
+	Values ('34521','015');
+
+Insert Into HotelReservations ( CustomerID ,  HotelID )
+	Values ('465321', '013');
+
+Insert Into HotelReservations ( CustomerID ,  HotelID )
+	Values ('543621', '099');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

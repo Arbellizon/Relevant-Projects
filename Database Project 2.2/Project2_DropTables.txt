@@ -1,0 +1,14 @@
+use csc320_calvija
+
+drop table Customers;
+
+
+drop table CarReservations;
+
+drop table Flights;
+
+drop table FlightReservations;
+
+drop table Hotel;
+
+drop table HotelReservatshoions;
