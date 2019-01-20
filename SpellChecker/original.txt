@@ -1,0 +1,205 @@
+import java.io.*;
+import java.util.*;   
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+public class SpellChecker 
+{
+    private Node root;
+    
+    public static String DictFormatted;
+    public static String MisWord;
+    
+  private class Node
+    { 
+      Node(char c)
+      {
+          c=c;
+      }
+      char c;
+      Node left, mid, right;
+      boolean end;
+
+    }
+	Node Root= null;
+        
+	public boolean contains(String word)
+	{ 
+            return contains(root, word, 0); 
+        }
+
+	private boolean contains(Node x, String s, int d)
+	{
+          char c = s.charAt(d);
+              
+	  if (x == null) 
+          {
+              
+              return false;
+	  
+          }
+          
+	  if (c < x.c)
+          {
+              return contains(x.left, s, d);
+          }
+	  else if (c > x.c)
+          {
+              return contains(x.right, s, d);
+          }
+	  else if (d < s.length()-1) 
+          {
+              return contains(x.mid, s, d+1);
+          }
+	  else 
+          {
+              return x.end;
+          }
+	}
+        public void add(String word)
+	{ 
+            System.out.println("work please");
+            
+            root = add(root, word, 0);
+        }
+
+	private Node add(Node x, String word, int d)
+	{
+          System.out.println("work");
+	  char c = word.charAt(d);
+          
+	  if (x == null)
+          {
+              x = new Node(c);
+          }
+	  if (c < x.c)
+          {
+            x.left = add(x.left, word, d);
+          }
+            
+	  else if (c > x.c)
+          {
+              x.right = add(x.right, word, d);
+
+          }
+	  else if (d < word.length()-1)
+          {
+              x.mid = 	add(x.mid, word, d+1);
+          }
+	  else
+          {
+              x.end = true;
+              
+          }
+            
+	 return x;
+         
+        }
+        
+    /**
+     *
+     * @param FileName
+     * @param Choice
+     * @return
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
+    public String SpellCheck(String FileName) throws FileNotFoundException, IOException
+       { 
+
+            BufferedReader OpenDict= new BufferedReader(new FileReader("WordList.docx")); // use SimpleList if wordListFails cause of size
+    
+            Scanner PassDict= new Scanner(OpenDict);
+    
+       
+           while(PassDict.hasNext())
+           {
+             String HoldScan = PassDict.useDelimiter(" ").toString();
+             
+              SpellChecker.DictFormatted=  HoldScan;
+              
+            
+           
+            add(SpellChecker.DictFormatted);
+ ////////////////////////////////////////////////////////
+ //Opening chosen File
+ 
+ 
+  
+       //int a=0;//variable that displays the chosen file's line number
+       
+       Scanner FileToCheck = new Scanner(FileName);
+        int LineNumber=0;
+                while (FileToCheck.hasNext()) 
+                {
+                     //gives line number
+                    
+                    
+                
+                   String FormattedFile= FileToCheck.useDelimiter("s\\.\\,|\\n\" ").toString();
+                   
+                   boolean hasUppercase = !FormattedFile.equals(FormattedFile.toLowerCase());
+                 
+                   if(!hasUppercase)
+                   {
+                       break;
+                   }
+                   else
+                   {
+                       FormattedFile=FormattedFile.toLowerCase();
+                   }
+                   
+                    LineNumber++;
+                   //Will get misspelled word
+                //////////////////////////////////////////////////
+                //using sort to compare file words to tree nodes
+                
+               if(contains(FormattedFile)==false)
+               {
+                   SpellChecker.MisWord=FileToCheck.next();
+                   
+                   System.out.println(LineNumber + SpellChecker.MisWord);
+               }
+               else
+               {
+                   System.out.println("{ALL CLEAR");
+               }
+                   
+                      
+         }
+                
+           }
+          //System.out.println(SpellChecker.MisWord + LineNumber);
+          return SpellChecker.MisWord;
+       }
+
+public static void main(String[] args) throws IOException
+{
+   SpellChecker call = new SpellChecker();
+   
+   //System.out.println("Please Enter a File to Check");
+   
+   //Scanner WriteMe = new Scanner(System.in);
+   
+   //String OpenThis= WriteMe.toString();
+  // Node x= null;
+   
+   
+  
+   // call.add(root," ", 0);
+   call.add("Band");
+  
+    //call.add("Zealot");
+     //call.add("Mushroom");
+      //call.add("Quite");
+       //call.add("Applesauce");
+   
+   //call.SpellCheck("aplers");
+   
+   //System.out.println(SpellChecker.MisWord);
+
+}
+}
+
+
+    
